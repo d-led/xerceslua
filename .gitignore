@@ -11,9 +11,6 @@
 [Dd]ebug*/
 [Rr]elease/
 
-build/
-
-
 [Tt]est[Rr]esult
 [Bb]uild[Ll]og.*
 
@@ -109,4 +106,3 @@ UpgradeLog*.XML
 packages/
 
 xerces-c-3.1.1/*
-Build/*
