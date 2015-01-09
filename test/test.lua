@@ -8,6 +8,7 @@ local potential_paths = {
 '../bin/linux/gmake/x32/Release/?.so',
 '../bin/linux/gmake/x32/Debug/?.so',
 '../bin/linux/gmake/x64/Release/?.so',
+'../bin/linux/gmake/?.so',
 '../bin/linux/gmake/x64/Debug/?.so'
 }
 
