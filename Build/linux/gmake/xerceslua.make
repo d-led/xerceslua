@@ -107,6 +107,50 @@ ifeq ($(config),release64)
   endef
 endif
 
+ifeq ($(config),debug)
+  OBJDIR     = ../../../obj/linux/gmake/Native/Debug/xerceslua
+  TARGETDIR  = ../../../bin/linux/gmake
+  TARGET     = $(TARGETDIR)/xerceslua.so
+  DEFINES   += -DDEBUG -D_DEBUG
+  INCLUDES  += -I../../../deps/LuaBridge -I/usr/include/lua5.1
+  ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
+  ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -g -fPIC
+  ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS)
+  ALL_RESFLAGS  += $(RESFLAGS) $(DEFINES) $(INCLUDES)
+  ALL_LDFLAGS   += $(LDFLAGS) -L../../../bin -L. -shared
+  LDDEPS    +=
+  LIBS      += $(LDDEPS) -llua5.1 -lxerces-c
+  LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(ALL_LDFLAGS) $(LIBS)
+  define PREBUILDCMDS
+  endef
+  define PRELINKCMDS
+  endef
+  define POSTBUILDCMDS
+  endef
+endif
+
+ifeq ($(config),release)
+  OBJDIR     = ../../../obj/linux/gmake/Native/Release/xerceslua
+  TARGETDIR  = ../../../bin/linux/gmake
+  TARGET     = $(TARGETDIR)/xerceslua.so
+  DEFINES   += -DRELEASE
+  INCLUDES  += -I../../../deps/LuaBridge -I/usr/include/lua5.1
+  ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
+  ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -O2 -fPIC
+  ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS)
+  ALL_RESFLAGS  += $(RESFLAGS) $(DEFINES) $(INCLUDES)
+  ALL_LDFLAGS   += $(LDFLAGS) -L../../../bin -L. -s -shared
+  LDDEPS    +=
+  LIBS      += $(LDDEPS) -llua5.1 -lxerces-c
+  LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(ALL_LDFLAGS) $(LIBS)
+  define PREBUILDCMDS
+  endef
+  define PRELINKCMDS
+  endef
+  define POSTBUILDCMDS
+  endef
+endif
+
 OBJECTS := \
 	$(OBJDIR)/xerceslua_lib.o \
 	$(OBJDIR)/xerceslua.o \

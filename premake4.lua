@@ -2,6 +2,8 @@ include 'premake'
 
 make_solution 'xerceslua'
 
+platforms { 'native' }
+
 lua = assert(dofile 'premake/recipes/lua.lua')
 
 OS = os.get()
