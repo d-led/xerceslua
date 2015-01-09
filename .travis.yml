@@ -5,5 +5,6 @@ before_script:
 
 script:
   - make -C Build/linux/gmake config=release
+  - ls -R bin
   - cd test
   - lua test.lua
