@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libraries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:noNamespaceSchemaLocation="sample.xsd">
+	<library>
+		<name>pugilua</name>
+		<url>https://github.com/d-led/pugilua</url>
+		<url>???</url>
+		<no_such_field />
+	</library>
+</libraries>
