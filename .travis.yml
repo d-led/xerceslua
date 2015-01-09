@@ -5,5 +5,4 @@ before_script:
 
 script:
   - make -C Build/linux/gmake config=release
-  - cd test
-  - lua test.lua
+  - sh -c 'cd test && lua test.lua'
