@@ -3,6 +3,8 @@ xerceslua
 
 A minimal lua wrapper of Xerces-C++ in order to be able to validate xml files
 
+[![Build Status](https://travis-ci.org/d-led/xerceslua.svg?branch=master)](https://travis-ci.org/d-led/xerceslua)
+
 Usage
 -----
 
