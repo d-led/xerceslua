@@ -1,10 +1,14 @@
 local potential_paths = {
-'../bin/windows/vs2013/x32/Debug/?.dll',
 '../bin/windows/vs2013/x32/Release/?.dll',
-'../bin/windows/vs2013/x64/Debug/?.dll',
+'../bin/windows/vs2013/x32/Debug/?.dll',
 '../bin/windows/vs2013/x64/Release/?.dll',
+'../bin/windows/vs2013/x64/Debug/?.dll',
+'../bin/windows/vs2013/native/Release/?.dll',
 '../bin/windows/vs2013/native/Debug/?.dll',
-'../bin/windows/vs2013/native/Release/?.dll'
+'../bin/linux/gmake/x32/Release/?.so',
+'../bin/linux/gmake/x32/Debug/?.so',
+'../bin/linux/gmake/x64/Release/?.so',
+'../bin/linux/gmake/x64/Debug/?.so'
 }
 
 local extra_cpath = table.concat(potential_paths, ";");

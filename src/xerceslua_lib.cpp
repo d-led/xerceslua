@@ -10,8 +10,6 @@
 
 #ifdef _MSC_VER
 #include <xercesc/util/Xerces_autoconf_config.msvc.hpp>
-#else
-#include <xercesc/util/Xerces_autoconf_config.hpp.in>
 #endif
 
 #include <xercesc/parsers/XercesDOMParser.hpp>

@@ -31,10 +31,11 @@ links {
 	lua.links[OS]
 }
 
-configuration 'Debug'
+configuration { 'Debug', 'windows' }
 	links 'xerces-c_3D'
-configuration 'Release'
+configuration { 'Release', 'windows' }
 	links 'xerces-c_3'
 configuration '*'
+	links 'xerces-c'
 
 targetprefix ""
