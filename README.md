@@ -23,14 +23,10 @@ if not log.Ok then
 end
 ````
 
-Demo
-----
+Example
+-------
 
-Windows:
-```
-cd test
-.\test.bat
-```
+run `test.bat` (or `test.lua`) from the `test` directory.
 
 Dependencies
 ------------
