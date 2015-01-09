@@ -35,7 +35,8 @@ configuration { 'Debug', 'windows' }
 	links 'xerces-c_3D'
 configuration { 'Release', 'windows' }
 	links 'xerces-c_3'
-configuration '*'
+configuration 'not windows'
 	links 'xerces-c'
+configuration '*'
 
 targetprefix ""

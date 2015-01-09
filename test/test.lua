@@ -22,9 +22,13 @@ parser:setValidationScheme(xerces.ValSchemes.Val_Always)
 local log=parser:parse("sample.xml")
 print('parse ok: ',log.Ok)
 if not log.Ok then
-    print(log.Count)
+    print('error count: ', log.Count)
     for i=0,log.Count-1 do
         local err=log:GetLogEntry(i)
-        print(err.SystemId..', l:'..err.LineNumber..', c:'..err.ColumnNumber..', e:'..err.Message,err.LogType)
+        print(err.SystemId
+        		..', l:'..err.LineNumber
+        		..', c:'..err.ColumnNumber
+        		..', e:'..err.Message
+		)
     end
 end
