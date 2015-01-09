@@ -39,6 +39,8 @@ configuration { 'Release', 'windows' }
 	links 'xerces-c_3'
 configuration 'not windows'
 	links 'xerces-c'
+configuration 'macosx'
+	targetextension '.so'
 configuration '*'
 
 targetprefix ""

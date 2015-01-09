@@ -9,7 +9,11 @@ local potential_paths = {
 '../bin/linux/gmake/x32/Debug/?.so',
 '../bin/linux/gmake/x64/Release/?.so',
 '../bin/linux/gmake/?.so',
-'../bin/linux/gmake/x64/Debug/?.so'
+'../bin/linux/gmake/x64/Debug/?.so',
+'../bin/macosx/gmake/x32/Debug/?.so',
+'../bin/macosx/gmake/x32/Release/?.so',
+'../bin/macosx/gmake/x64/Debug/?.so',
+'../bin/macosx/gmake/x64/Release/?.so'
 }
 
 local extra_cpath = table.concat(potential_paths, ";");
