@@ -10,7 +10,7 @@ Usage
 assert(require 'xerceslua')
 
 local parser=xerces.XercesDOMParser()
-parser:loadGrammar("sample.dtd",xerces.GrammarType.DTDGrammarType)
+pparser:loadGrammar("sample.xsd",xerces.GrammarType.SchemaGrammarType)
 parser:setValidationScheme(xerces.ValSchemes.Val_Always)
 local log=parser:parse("sample.xml")
 print('parse ok: ',log.Ok)
